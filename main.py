@@ -2,10 +2,18 @@ from board import Board
 from player import Player
 from game import Game
 
+#Main.py coded by Mason
+
 def main():
     print("Welcome to Connect Four!")
+
+    # Get player names
+    player1_name = input("Enter Player 1's name: ")
+    player2_name = input("Enter Player 2's name: ")
+
+    # Create board and players
     board = Board()
-    players = [Player("Player 1", "X"), Player("Player 2", "O")]
+    players = [Player(player1_name, "X"), Player(player2_name, "O")]
     game = Game(board, players)
 
     board.print_board()
